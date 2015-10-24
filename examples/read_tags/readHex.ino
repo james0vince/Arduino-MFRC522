@@ -7,6 +7,7 @@
 MFRC522 nfc(SAD, RST);
 
 int count = 0;
+String name "David.";
 
 void setup() {
   SPI.begin();
@@ -71,7 +72,8 @@ void loop() {
     Serial.println("-----------------------------------------------------------------------");
     Serial.println("-----------------------------------------------------------------------");
     Serial.println("Authentication: Success.");
-    Serial.println("Welcome David.");
+    Serial.print("Welcome ");
+    Serial.println(name);
     Serial.println("-----------------------------------------------------------------------");
     // Select the tag that we want to talk to. If we don't do this the
     // chip does not know which tag it should talk if there should be
